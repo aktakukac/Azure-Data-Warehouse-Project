@@ -50,7 +50,7 @@ def populate_table(c, filename, tablename):
 
 # Create Rider table
 table = "rider"
-filename = 'C:/Users/M33313/OneDrive - E.ON/Munka/Udacity/Data Engineering Nanodegree/repository/Azure-Data-Warehouse-Project/starter/data/riders.csv'
+filename = '/starter/data/riders.csv'
 create = "CREATE TABLE rider (rider_id INTEGER PRIMARY KEY, first VARCHAR(50), last VARCHAR(50), address VARCHAR(100), birthday DATE, account_start_date DATE, account_end_date DATE, is_member BOOLEAN);"
 
 drop_recreate(cursor, table, create)
@@ -58,7 +58,7 @@ populate_table(cursor, filename, table)
 
 # Create Payment table
 table = "payment"
-filename = 'C:/Users/M33313/OneDrive - E.ON/Munka/Udacity/Data Engineering Nanodegree/repository/Azure-Data-Warehouse-Project/starter/data/payments.csv'
+filename = '/starter/data/payments.csv'
 create = "CREATE TABLE payment (payment_id INTEGER PRIMARY KEY, date DATE, amount MONEY, rider_id INTEGER);"
 
 drop_recreate(cursor, table, create)
@@ -66,7 +66,7 @@ populate_table(cursor, filename, table)
 
 # Create Station table
 table = "station"
-filename = 'C:/Users/M33313/OneDrive - E.ON/Munka/Udacity/Data Engineering Nanodegree/repository/Azure-Data-Warehouse-Project/starter/data/stations.csv'
+filename = '/starter/data/stations.csv'
 create = "CREATE TABLE station (station_id VARCHAR(50) PRIMARY KEY, name VARCHAR(75), latitude FLOAT, longitude FLOAT);"
 
 drop_recreate(cursor, table, create)
@@ -74,7 +74,7 @@ populate_table(cursor, filename, table)
 
 # Create Trip table
 table = "trip"
-filename = 'C:/Users/M33313/OneDrive - E.ON/Munka/Udacity/Data Engineering Nanodegree/repository/Azure-Data-Warehouse-Project/starter/data/trips.csv'
+filename = '/starter/data/trips.csv'
 create = "CREATE TABLE trip (trip_id VARCHAR(50) PRIMARY KEY, rideable_type VARCHAR(75), start_at TIMESTAMP, ended_at TIMESTAMP, start_station_id VARCHAR(50), end_station_id VARCHAR(50), rider_id INTEGER);"
 
 drop_recreate(cursor, table, create)
